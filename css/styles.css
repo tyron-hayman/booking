@@ -2,3 +2,130 @@ body, html {
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Global */
+
+h1 {
+  font-size: 3em;
+  color: #000000;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  color: #777777;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1em;
+  color: #444444;
+}
+
+.copyright {
+  font-size: 0.8em;
+  color: #999999;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+/* Loader */
+
+.loader {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.0);
+  border: #fafafa 2px solid;
+  border-top-color: #ec008c;
+  border-left-color: #ec008c;
+  border-bottom-color: #ec008c;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: rotate 0.5s linear infinite;
+  -webkit-animation: rotate 0.5s linear infinite;
+  -moz-animation: rotate 0.5s linear infinite;
+  -o-animation: rotate 0.5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+  }
+}
+
+/* Landing */
+
+#welcome-container .loader {
+  margin: 0 auto;
+  display: none;
+}
+
+#welcome-container {
+  width: 700px;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+}
+
+#welcome-container img {
+  width: 15%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+#welcome-container h1 {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+#welcome-container h2 {
+  font-size: 1.7em;
+  line-height: 1.7em;
+  margin: 0 0 20px 0;
+}
+
+.btn-primary {
+  border: none;
+  box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  -webkit-box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  -moz-box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  -o-box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  background: #ec008c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

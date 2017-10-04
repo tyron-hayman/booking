@@ -24,4 +24,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 		$this->load->view('parts/footer');
 	}
+
+	public function run_initial_setup() {
+
+		echo '<a href="#" class="btn btn-primary btn-lg" id="">Almost there, one more step!</a>';
+
+	}
+
 }

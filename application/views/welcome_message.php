@@ -1,19 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+?>
+<div id="welcome-container">
+	<img src="<?php site_url(); ?>images/coffee.svg" alt=""/>
+	<h1>Grab a coffee</h1>
+	<h2>Let's get you started!</h2>
+	<div id="welcome_content">
+		<div class="loader"></div>
+		<a href="#" class="btn btn-primary btn-lg" id="install_db_btn">Run Setup</a>
+	</div><!-- content -->
+	<p class="copyright"><?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
