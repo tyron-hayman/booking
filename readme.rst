@@ -1,4 +1,13 @@
 ###################
+What is this app
+###################
+
+Booking applications, at least the good ones, seem to cost an arm and a leg. The intention behind this
+application is to fill in the void between the cheap and the expensive. This application will allow companies
+or teams to book time for meetings, meeting room usage and more. 
+
+
+###################
 What is CodeIgniter
 ###################
 
