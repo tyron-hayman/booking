@@ -16,14 +16,18 @@
           success: function(data) {
 
               $('#welcome_content').fadeOut(500, function() {
-                $('#welcome_content').html("<p>" + data + "</p>");
+                $('#welcome_content').html(data);
                 $('#welcome_content').fadeIn(500);
               });
 
 
               console.log(data);
           },
-          error: function() {
+          error: function(data) {
+            $('#welcome_content').fadeOut(500, function() {
+              $('#welcome_content').html(data);
+              $('#welcome_content').fadeIn(500);
+            });
           }
       });
 

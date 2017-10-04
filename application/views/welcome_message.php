@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <div id="welcome-container">
-	<img src="<?php site_url(); ?>images/coffee.svg" alt=""/>
+	<img src="<?php echo site_url(); ?>images/coffee.svg" alt=""/>
 	<h1>Grab a coffee</h1>
 	<h2>Let's get you started!</h2>
 	<div id="welcome_content">

@@ -129,3 +129,17 @@ p {
   background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+#welcome_content_last input {
+  outline: none;
+  display: block;
+  padding: 1.5%;
+  width: 60%;
+  margin: 0 auto 20px auto;
+  border: none;
+  box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  -webkit-box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  -moz-box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  -o-box-shadow: rgba(0,0,0,0.2) 3px 3px 11px;
+  background: #ffffff;
+}
