@@ -9,3 +9,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="<?php echo site_url(); ?>css/styles.css" type="text/css"/>
 </head>
 <body>
+<div id="user_alerts"></div>

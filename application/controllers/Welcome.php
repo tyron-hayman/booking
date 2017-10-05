@@ -20,8 +20,15 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+
+		if ( $this->db->table_exists('users') ) {
+			$data['showLogin'] = "showLogin";
+		} else {
+			$data['showLogin'] = "";
+		}
+
 		$this->load->view('parts/header');
-		$this->load->view('welcome_message');
+		$this->load->view('welcome_message', $data);
 		$this->load->view('parts/footer');
 	}
 
@@ -44,6 +51,24 @@ class Welcome extends CI_Controller {
 		} else {
 			echo '<p style="margine: 0;!important">Looks like the setup was already done.</p><a style="margine: 0;!important" href="' . site_url() . 'welcome/user_setup" class="btn btn-primary btn-lg" id="">Let\'s continue!</a>';
 		}
+
+	}
+
+	public function run_user_setup() {
+
+		$name = $this->input->post('name');
+		$password = $this->input->post('password');
+		$email = $this->input->post('email');
+
+		if ( !$this->db->table_exists('users') ) {
+			if ( $this->db->query('CREATE TABLE users ( id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, admin TEXT NOT NULL)') ) {
+				if ( $this->db->query('INSERT INTO  users (name,password,email,admin) VALUES ("' . $name . '", "' . MD5($password) . '", "' . $email . '","1")') ) {
+					echo '<a href="' . site_url() . 'welcome" class="btn btn-primary btn-lg" id="">We are done, time to login!</a>';
+				}
+			}
+		}
+
+
 
 	}
 
