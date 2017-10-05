@@ -21,20 +21,20 @@ Class User extends CI_Model {
 
     }// function
 
-    function check_user_level($username) {
+    function check_user_level($email) {
 
 	    $userlevel;
-	    $result = $this->db->query('SELECT * FROM users WHERE username = "' . $username . '" LIMIT 1');
-		$doorInfo = $result->row();
-		$data = $doorInfo->admin;
+	    $result = $this->db->query('SELECT * FROM users WHERE email = "' . $email . '" LIMIT 1');
+		  $doorInfo = $result->row();
+		  $data = $doorInfo->admin;
 
-		if ( $data == 1) {
-			$userlevel = "admin";
-		} else {
-			$userlevel = "user";
-		}
+  		if ( $data == 1) {
+  			$userlevel = "admin";
+  		} else {
+  			$userlevel = "user";
+  		}
 
-		return $userlevel;
+  		return $userlevel;
 
     } // function
 
