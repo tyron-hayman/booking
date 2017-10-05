@@ -178,7 +178,7 @@ p {
   background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#welcome_content_last input {
+#welcome_content_last input, #login_form input {
   outline: none;
   display: block;
   padding: 1.5%;

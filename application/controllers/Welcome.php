@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
 	public function run_initial_setup() {
 
 		if ( !$this->db->table_exists('booking_schedule') ) {
-			if ( $this->db->query('CREATE TABLE booking_schedule ( id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, booking_date TEXT NOT NULL, booking_by TEXT NOT NULL, booking_content TEXT NOT NULL)') ) {
+			if ( $this->db->query('CREATE TABLE rooms ( id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, room_num TEXT NOT NULL, room_avail TEXT NOT NULL, notes TEXT NOT NULL)') ) {
 				echo '<a href="' . site_url() . 'welcome/user_setup" class="btn btn-primary btn-lg" id="">Almost there, one more step!</a>';
 			} else {
 				echo '<p>There was an error while creating the database table</p>';
